@@ -9,7 +9,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/src/data/data.json");
+        const response = await fetch("/data/data.json");
         const jsonData: Data[] = await response.json();
         const dataWithIds = jsonData.map((data) => ({
           ...data,
